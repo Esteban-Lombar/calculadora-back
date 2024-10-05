@@ -11,6 +11,10 @@ app.use(urlencoded({extended: true}));
 app.use(json());
 app.use(cors());
 
+app.get('/', async (rec, res)=> {
+    res.send("Hola soy el backend de la calculadora de Esteban")
+})
+
 app.use('/v1/calculadora', router);
 
 app.listen(3500, ()=>{
